@@ -1,24 +1,19 @@
-# weather
+# Weather application
 
 ## Project setup
+You should have a basic knowledge of Javascript, NodeJS and npm before setting this up. 
+Steps are given below:
 ```
-npm install
+- npm i -g @vue/cli
+- vue create {{filename}}
 ```
 
-### Compiles and hot-reloads for development
+### Starting the local server
+This website require a local server. So, for that just do:
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

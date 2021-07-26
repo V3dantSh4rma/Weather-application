@@ -69,7 +69,7 @@ export default {
       let weeks = ['Monday' , ' Tuesday' , 'Wednesday' , 'Thursday' , 'Friday', 'Saturday' , 'Sunday'];
       
       let current_date = dt.getDate();
-      let current_week = weeks[dt.getDay()];
+      let current_week = weeks[dt.getDay()-1];
       let current_year = dt.getFullYear();
       const current_month = months[dt.getMonth()];
 

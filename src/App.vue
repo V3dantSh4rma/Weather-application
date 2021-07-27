@@ -216,7 +216,7 @@ body{
     margin-left: auto;
     margin: 0;
     padding: 0;
-    background-image: url('/vercel/path0/src/mobilebackdrop.jpeg');
+    background-image: url('/vercel/path0/src/mobilebackdrop.jpg');
     cursor: pointer;
   }
 

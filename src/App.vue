@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+
     <div class="title">
       <title> Weather Searcher </title>
       <h1> Weather Searcher </h1>
@@ -14,24 +15,14 @@
       @keypress="getWeather"/>
     </div>
 
-    <div class="footer">
-      <h1> Website made using VueJS. </h1>
-    </div>
-
-    <div class="nav-bar">
-      <ul>
-        <li><a href = "#"> Home </a></li>
-        <li><a href="https://discord.gg/MzD9z6gDYV"> Join our Discord! </a></li>
-      </ul>
-    </div>
-
     <div class="main-box">
       <div class="dtl" v-if="typeof weather.main != 'undefined'" > 
         <p class = "location"> {{ weather.name}} , {{ weather.sys.country }} </p>
         <p class = "date"> {{dateBuild()}} </p>
-        <p class = "temp"> {{ Math.round(weather.main.temp)}}℃</p>
+        <p class = "temp"> {{ Math.round(weather.main.temp)}}℃ </p>
       </div>
     </div>
+
   </div>
 </template>
 
@@ -54,9 +45,7 @@ export default {
         fetch(`${this.api_url}weather?q=${this.query}&units=metric&APPID=${this.api_key}`).then(
           res => {
             return res.json();
-          }
-        ).then(this.setResults);
-      } 
+          }).then(this.setResults)} 
     },
 
     setResults (results){
@@ -76,15 +65,16 @@ export default {
       return `${current_date} ${current_month}, ${current_week} ${current_year}`
     }
   }
-}
+};
 </script>
-
 <style>
-*{
+body{
   margin: 0%;
   padding: 0;
   backface-visibility: visible;
-  background-color: rgb(24,24,24);
+  background-image: url('./assets/mars2.webp');
+  background-size: cover;
+  opacity: 140%;
 }
 
 .title{
@@ -118,14 +108,13 @@ export default {
 }
 
 .main-box{
-  background-color: #fff;
   align-items: center;
   position: absolute;
   justify-content: center;
-  top: 24%;
-  left: 40%;
+  top: 30%;
+  left: 38%;
   border-radius: 10px;
-  margin: 20px auto;
+  margin: 10px auto;
   border-radius: 25px;
   margin: 2px solid;
 }
@@ -163,13 +152,12 @@ export default {
 }
 
 .search-bar{
-  width: 30%;
+  width: 20%;
   position: relative;
   position: absolute;
   top: 15%;
   left: 40%;
 }
-
 
 .search-bar:focus{
   color: #000;
@@ -195,28 +183,6 @@ export default {
   font-size: 15px;
 }
 
-.nav-bar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  align-items: center;
-  justify-items: center;
-
-}
-
-.nav-bar li {
-  float: left;
-}
-
-.nav-bar li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
 .search-bar .search{
   width: 50%;
   border: none;
@@ -232,5 +198,56 @@ export default {
 
 #app, *{
   margin: auto;
+  font-size-adjust: inherit;
+  font-style: italic;
+  font-size: 20px;
+}
+
+.nav-bar:hover{
+  transition: 1.6s ease-in-out;
+  background-color: white;
+  color: black;
+}
+
+@media only screen and (max-width: 500px){
+  *{
+    margin: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin: 0;
+    padding: 0;
+    background-image: url('./assets/mobile bg.webp');
+    cursor: pointer;
+  }
+
+  .search-bar{
+    width: 60%;
+    color: #fff;
+    width: 250px;
+    position: absolute;
+    left: 35%;
+  }
+
+  .main-box{
+    width: 10%;
+    font-size: 5px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    left: 25%;
+  }
+
+  .title{
+    font: xx-large;
+    position: absolute;
+    left: 35%;
+  }
+
+  .dtl{
+    padding: 2px;
+    font-size: 10px;
+  }
 }
 </style>

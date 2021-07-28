@@ -218,6 +218,11 @@ body{
     padding: 0;
     background-image: url('./assets/mobilebackdrop.jpg');
     cursor: pointer;
+    background-repeat: no-repeat;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .search-bar{

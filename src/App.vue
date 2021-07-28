@@ -74,6 +74,7 @@ body{
   backface-visibility: visible;
   background-image: url('./assets/mars2.webp');
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .title{

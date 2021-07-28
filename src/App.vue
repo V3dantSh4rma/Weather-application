@@ -72,7 +72,7 @@ body{
   margin: 0%;
   padding: 0;
   backface-visibility: visible;
-  background-image: url('./assets/mars2.webp');
+  background-color: rgb(24,24,24);
   background-size: cover;
   opacity: 140%;
 }

@@ -72,9 +72,8 @@ body{
   margin: 0%;
   padding: 0;
   backface-visibility: visible;
-  background-color: rgb(24,24,24);
+  background-image: url('./assets/mars2.webp');
   background-size: cover;
-  opacity: 140%;
 }
 
 .title{

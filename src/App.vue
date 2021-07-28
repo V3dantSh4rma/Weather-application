@@ -85,10 +85,6 @@ body{
   color: white;
   top:05%;
   left: 40%;
-  margin: 2px;
-  padding: 12px solid #fff;
-  margin: auto;
-  border-radius: 12px;
 }
 
 .dtl{

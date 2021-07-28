@@ -72,7 +72,7 @@ body{
   margin: 0%;
   padding: 0;
   backface-visibility: visible;
-  background-image: url('/vercel/path0/src/mars2.webp');
+  background-image: url('./assets/mars2.webp');
   background-size: cover;
   opacity: 140%;
 }
@@ -216,7 +216,7 @@ body{
     margin-left: auto;
     margin: 0;
     padding: 0;
-    background-image: url('/vercel/path0/src/mobilebackdrop.jpg');
+    background-image: url('./assets/mobilebackdrop.jpg');
     cursor: pointer;
   }
 
